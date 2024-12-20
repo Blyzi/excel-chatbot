@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "towardschangestest"
+version = "0.1.0"
+description = ""
+authors = ["Blyzi <flash.spaces@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.3"
+openpyxl = "^3.1.5"
+streamlit = "^1.41.1"
+langchain-core = "^0.3.25"
+langchain-community = "^0.3.12"
+langchain-mistralai = "^0.2.3"
+langgraph = "^0.2.60"
+sqlalchemy = "^2.0.36"
+watchdog = "^6.0.0"
+langchain-ollama = "^0.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
