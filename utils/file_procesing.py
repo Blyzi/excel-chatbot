@@ -45,7 +45,7 @@ def extract_tables_from_raw_dataframe(df: pd.DataFrame) -> List[pd.DataFrame]:
 
                 # Extract the table and replace the values with None
                 table = df.iloc[bondaries[0]+1:bondaries[2]+1, bondaries[1]:bondaries[3]+1].copy()
-                table.columns = df.iloc[bondaries[0], bondaries[1]:bondaries[3]+1]
+                table = table.set_axis(df.iloc[bondaries[0], bondaries[1]:bondaries[3]+1].copy(), axis=1)
                 table.reset_index(drop=True, inplace=True)
 
                 tables.append(table)
